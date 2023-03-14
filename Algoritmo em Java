@@ -1,0 +1,22 @@
+package aula4;
+
+import java.util.Scanner;
+
+public class ex1 {
+	public static void main(String [] agrs) {
+		Scanner input = new Scanner(System.in);
+		int num[] = new int[10];
+		int cont = 0;
+		float resto;
+		System.out.println("Informe os 10 numeros: ");
+		for (cont = 0; cont < 10; cont++) {
+			num[cont] = input.nextInt();
+		}
+		for (cont = 0; cont < 10; cont++) {
+			resto = num[cont] % 2;
+			if (resto == 0) {
+				System.out.println("O numero da posição "+cont+" é par.");
+			}
+		}
+	}
+}
