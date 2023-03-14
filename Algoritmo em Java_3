@@ -1,0 +1,24 @@
+package aula4;
+
+import java.util.Scanner;
+
+public class ex3 {
+	public static void main(String [] agrs) {
+		Scanner input =  new Scanner(System.in);
+		String [] vetor = new String[10];
+		String nome;
+		int cont, qtd = 0;
+		for (cont = 0; cont < 10; cont++) {
+			System.out.println("Informe o nome da posição "+cont+":");
+			vetor[cont] = input.nextLine().toLowerCase();
+		}
+		System.out.println("Informe o nome a ser buscado: ");
+		nome = input.nextLine().toLowerCase();
+		for (cont = 0; cont < 10; cont++) {
+			if(vetor[cont].contains(nome)) {
+				cont++;
+			}
+		}
+		System.out.println(cont+" pessoas possuem o nome "+nome);
+	}
+}
